@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: "Lexend Deca", sans-serif;
+}
+.produtos{
+    background-color: hsl(214, 48%, 39%);
+    display: flex;
+    align-items:center ;
+    justify-content: space-around;
+    padding: 50px 110px;
+}
+.product-conteudo{
+    color: white;
+    flex-direction: column;
+    text-align: center;
+}
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.product-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 25%; /* Ajusta a largura dos produtos */
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-item:hover {
+    transform: translateY(-5px);
+}
+.product-item img {
+    width: 100%;
+    height: 200px; /* Define uma altura fixa */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.product-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: hsl(214, 48%, 39%);
+}
+.product-item p {
+    color: hsl(213, 19%, 49%);
+    margin-bottom: 15px;
+}
+.btn-gradiente {
+    background: #12ad4b;
+    color: white;
+    padding: 10px 20px;
+    width: 80%;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn-gradiente:hover {
+    background-color: #25d366;
+}

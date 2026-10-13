@@ -1,0 +1,9 @@
+D:\ultimosemcaralhow\lolRej\lolRej\obj\Debug\net8.0\lolRej.csproj.AssemblyReference.cache
+D:\ultimosemcaralhow\lolRej\lolRej\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\ultimosemcaralhow\lolRej\lolRej\obj\Debug\net8.0\lolRej.GeneratedMSBuildEditorConfig.editorconfig
+D:\ultimosemcaralhow\lolRej\lolRej\obj\Debug\net8.0\lolRej.AssemblyInfoInputs.cache
+D:\ultimosemcaralhow\lolRej\lolRej\obj\Debug\net8.0\lolRej.AssemblyInfo.cs
+D:\ultimosemcaralhow\lolRej\lolRej\obj\Debug\net8.0\lolRej.csproj.CoreCompileInputs.cache
+D:\ultimosemcaralhow\lolRej\lolRej\obj\Debug\net8.0\lolRej.MvcApplicationPartsAssemblyInfo.cache
+D:\ultimosemcaralhow\lolRej\lolRej\obj\Debug\net8.0\lolRej.RazorAssemblyInfo.cache
+D:\ultimosemcaralhow\lolRej\lolRej\obj\Debug\net8.0\lolRej.RazorAssemblyInfo.cs

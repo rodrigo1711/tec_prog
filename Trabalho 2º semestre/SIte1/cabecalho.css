@@ -1,0 +1,39 @@
+.cabecalho{
+    background-color: hsl(214, 48%, 39%);
+    display: flex;
+    justify-content: space-between;/*espaçamento entre os usuario*/
+    align-items: center;/*alinhas na vertical */
+    padding: 20px 150px;
+}
+.logo a{
+    font-size: 25px;
+    font-weight: bold;
+    color: hsl(0, 0%, 100%);
+}
+.ul{
+    display: flex;
+    align-items: center;
+
+
+}
+.ul li{
+    margin: 0 35px;
+    font-size: 15px;
+}
+.ul li a{
+    color: hsl(0, 0%, 100%);
+}
+.ul li a:hover{
+    color: #25d366;
+}
+.menu-icon{
+    display: none;
+    position: relative;
+    z-index: 10;
+
+}
+@media (max-width: 960px){
+    .menu-icon {
+        display: block;
+    }
+}

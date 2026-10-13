@@ -1,0 +1,82 @@
+﻿@using Projeto_semestre.Models
+@model List<Carro>
+
+<style>
+    .carros-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+        padding: 30px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .carro-card {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+        padding: 20px;
+        transition: 0.2s;
+    }
+
+        .carro-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .carro-card p {
+            margin: 8px 0;
+            color: #333;
+        }
+
+            /* Primeiro texto = nome do carro */
+            .carro-card p:first-child {
+                font-size: 22px;
+                font-weight: bold;
+                color: #222;
+                margin-bottom: 10px;
+            }
+
+            /* Segundo texto = descrição */
+            .carro-card p:nth-child(2) {
+                font-size: 14px;
+                color: #777;
+                margin-bottom: 18px;
+            }
+
+            /* Ano, KM e transmissão */
+            .carro-card p:nth-child(n+3):nth-child(-n+5) {
+                font-size: 14px;
+                border-top: 1px solid #eee;
+                padding-top: 8px;
+            }
+
+            /* Preço */
+            .carro-card p:last-child {
+                border-top: 1px solid #eee;
+                margin-top: 15px;
+                padding-top: 15px;
+                font-size: 22px;
+                font-weight: bold;
+                color: #111;
+            }
+</style>
+
+
+<div class="carros-container">
+
+    @foreach (Carro carro in Model)
+    {
+        <div class="carro-card">
+            <p>@carro.Nome_carro</p>
+            <p>@carro.Desc_carro</p>
+            <p>@carro.Ano_carro</p>
+            <p>@carro.km_carro</p>
+            <p>@carro.transmis_carro</p>
+            <p>@carro.preco_carro</p>
+        </div>
+    }
+
+</div>

@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/*Logo*/
+.container-logo{
+    border: 1px ;
+    width: 200px;
+    height: 100px;
+    background-image: url("logo_UnboundPlace.png");
+    background-size: 300px 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container-logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*Fim logo*/
+
+/* Quadrado do login */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login{
+    width: 400px;
+    height: 350px;
+    padding: 1px;
+    border: 2px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login input{
+    margin: 10px;
+    height: 50px;
+    width: 90%;    
+    font-size: 25px;  
+}
+.login button{
+    font-size: 20px;
+    margin-top: 10px;
+    width: 92%;
+    height: 40px;
+}
+.login button:hover{
+    cursor: pointer;
+}
+/* Fim */
+
+/* Links para criar ou recuperar conta */
+.criar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.criar p, a{
+    font-size: 20px;
+}
+/* Fim */
+

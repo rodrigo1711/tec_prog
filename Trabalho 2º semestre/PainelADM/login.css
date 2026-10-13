@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lexend Deca", sans-serif;
+    background-color: hsl(204, 90%, 35%);
+}
+
+main {
+    margin: 130px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.borda {
+    background-color: hsl(0, 0%, 95%);
+    width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px hsla(214, 90%, 20%, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.borda h2 {
+    color: hsl(214, 90%, 30%);
+    text-align: center;
+}
+
+.borda h1 {
+    font-size: 32px;
+    color: hsl(214, 90%, 30%);
+    text-align: center;
+}
+
+.borda label {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.borda label input {
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid hsl(0, 0%, 70%);
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s;
+}
+
+.borda label input:focus {
+    outline: none;
+    border-color: hsl(214, 90%, 40%);
+    box-shadow: 0 0 0 2px hsla(214, 90%, 50%, 0.2);
+}
+
+.borda label form {
+    display: flex;
+    justify-content: center;
+}
+
+.borda label form button {
+    background-color:hsl(214, 90%, 40%);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 40px;
+}
+
+.borda label form button:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, hsl(214, 90%, 35%), hsl(204, 90%, 40%));
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

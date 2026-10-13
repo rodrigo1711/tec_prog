@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: "Lexend Deca", sans-serif;
+    /*background-color: var(--azulclaro);*/
+}
+
+/*Conteiner*/
+.btn-gradiente{
+    background-color: #12ad4b;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+.btn-gradiente:hover {
+    background-color: #25d366;
+}
+.container{
+    background-color: hsl(214, 48%, 39%);
+    display: flex;
+    align-items:center ;
+    justify-content: space-around;
+    padding: 10px 100px;
+}
+.main-text{
+    width: 50%;
+    color: hsl(0, 0%, 100%);
+}
+
+.main-text h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+    margin-left: 8px;
+}
+
+.main-text div{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.main-img{
+    width: 35%;
+}
+.main-img img{
+    width: 100%;
+}
+/*Fim container*/
+
+/*Resultados*/
+.resultado{
+    background-color: hsl(213, 19%, 49%);
+    padding: 50px 150px; 
+    margin: 0 auto;
+    display: flex;
+    align-items:center ;
+    justify-content: space-around;
+}
+.resultados-text{
+    color: hsl(0, 0%, 100%);
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 40%;
+}
+.resultado-numero{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: white;
+}
+.resultado-numero p{
+    text-align: center;
+    margin: 0 30px;
+    font-size: 20px;
+}
+.resultado-numero p span{
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+}
+/*Fim resultados*/
+
+/*Diferencias*/
+.diferencias{
+    padding: 50px 100px; 
+    margin: 0 auto;
+    display: flex;
+    align-items:center ;
+    justify-content: space-around;
+}
+.card{
+    width: 30%;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 02s;
+}
+.card .titulo{
+    margin: 13px 0;
+    font-size: 600;
+}
+.card img{
+    width: 60px;
+}
+/*Fim diferencias*/
+
+/*casa*/
+.casa{
+    padding: 50px 150px; 
+    margin: 0 auto;
+    display: flex;
+    align-items:center ;
+    justify-content: space-around;
+}
+.casa-img{
+    width: 50%;
+    border-radius: 10px;
+}
+.casa-text{
+    width: 50%;
+    padding-left: 90px;
+}
+.casa-text h2{
+    font-size: 40px;
+}
+.casa-text p{
+    margin: 20px 0;  
+}
+.casa-text b{
+    color: black;
+    font-size: 20px;
+}
+/*Fim casa*/
+
+/*melhores*/
+.azul{
+font-size: 24px;
+font-weight: 600;
+color: rgb(36, 68, 173);
+margin-left: 18%;
+}
+.melhores h2{
+    font-size: 40px;
+    margin-left: 18%;
+}
+.cards-melhores{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 150px;
+}
+.card-item{
+    width: 30%;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px -5px rgba(0,0,0,0.2);
+}
+.cards-melhores img{
+    width: 80px;
+}
+.local-casa{
+    margin: 5px 0;
+}
+.nome-casa{
+    font-size: 16px;
+}
+.cards-melhores .contatos{
+    margin-bottom: 20px;
+}
+.cards-melhores button{
+    cursor: pointer;
+    padding: 10px 20px;
+    color: white;
+    background-color: hsl(214, 90%, 35%);
+    border: none;
+    margin-top: 10px;
+}
+.cards-melhores button:hover{
+   background-color: #25d366; 
+}
+/*Fim melhores*/
+
+/*sletter*/
+.sletter{
+    background-color: hsl(214, 90%, 35%);
+    margin-top: 50px;
+    padding: 50px 200px;
+}
+.box-newsletter{
+    text-align: center;
+    background-image: url('img/background-newsletter.png');
+    padding: 110px 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}   
+.text-box {
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px;
+    padding: auto px auto px;
+    display: inline-block;
+    margin-bottom: 15px;
+} 
+.text-box h2{
+    font-size: 2.5rem;
+}
+.text-box p{
+    margin: 13px 0;
+}
+.box-newsletter form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.box-newsletter form input{
+    width: 50%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: #00000098;
+    background-color: #dadafa;
+}
+.box-newsletter form button{
+    font-size: 15px;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 14px;
+    color: white;
+    background-color: hsl(214, 90%, 35%);
+    cursor: pointer;
+}
+.box-newsletter form button:hover{
+    background-color: #25d366;
+}
+/*Fim sletter*/

@@ -1,0 +1,14 @@
+/*Rodapé*/
+footer{
+    background-color: hsl(214, 48%, 39%);
+}
+.rodape{
+    padding: 50px 350px; 
+    margin: 0 auto;
+    display: flex;
+    align-items:center ;
+    justify-content: space-around;
+    display: flex;
+    color: white;
+}
+/*Fim rodapé*/

@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prime Motors | Agência de Veículos</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f6f8;
+            color: #222;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: #111827;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff !important;
+        }
+
+        .navbar-brand span {
+            color: #e63946;
+        }
+
+        .nav-link {
+            color: #d1d5db !important;
+            margin-left: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #fff !important;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            color: white;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.82),
+                    rgba(0, 0, 0, 0.35)
+                ),
+                url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=80")
+                center/cover;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #e5e7eb;
+            margin-bottom: 30px;
+        }
+
+        .btn-main {
+            background-color: #e63946;
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn-main:hover {
+            background-color: #c92f3b;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* TÍTULOS */
+        .section-title {
+            font-weight: 800;
+            font-size: 2rem;
+        }
+
+        .section-subtitle {
+            color: #6b7280;
+        }
+
+        /* FILTROS */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .filter-btn {
+            border: 1px solid #d1d5db;
+            background: white;
+            color: #374151;
+            border-radius: 30px;
+            padding: 9px 20px;
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: #111827;
+            color: white;
+            border-color: #111827;
+        }
+
+        /* CARDS */
+        .car-card {
+            background-color: white;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            transition: 0.3s;
+        }
+
+        .car-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+        }
+
+        .car-image {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .car-body {
+            padding: 22px;
+        }
+
+        .car-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .car-year {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .car-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0;
+        }
+
+        .info-item {
+            background-color: #f3f4f6;
+            border-radius: 7px;
+            padding: 7px 10px;
+            font-size: 0.85rem;
+            color: #4b5563;
+        }
+
+        .info-item i {
+            margin-right: 4px;
+        }
+
+        .price-label {
+            color: #6b7280;
+            font-size: 0.85rem;
+        }
+
+        .price {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        /* DESTAQUE */
+        .highlight {
+            background-color: #111827;
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            overflow: hidden;
+        }
+
+        .highlight h2 {
+            font-weight: 800;
+        }
+
+        .highlight p {
+            color: #d1d5db;
+        }
+
+        .highlight-img {
+            width: 100%;
+            max-height: 320px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* CONTATO */
+        .contact-section {
+            background-color: white;
+        }
+
+        .contact-box {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            height: 100%;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            padding: 30px 0;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+
+            .hero {
+                min-height: 500px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .highlight {
+                padding: 25px;
+            }
+
+            .nav-link {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            PRIME<span>MOTORS</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#estoque">Estoque</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <h1>
+                Seu próximo carro
+                está aqui.
+            </h1>
+
+            <p>
+                Encontre veículos selecionados, revisados e prontos
+                para você. Qualidade, confiança e as melhores condições.
+            </p>
+
+            <a href="#estoque" class="btn btn-main">
+                <i class="bi bi-car-front-fill"></i>
+                Ver veículos
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ESTOQUE -->
+<section id="estoque" class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-4">
+
+            <h2 class="section-title">
+                Nossos veículos
+            </h2>
+
+            <p class="section-subtitle">
+                Confira alguns dos veículos disponíveis em nosso estoque.
+            </p>
+
+        </div>
+
+
+        <!-- FILTROS -->
+        <div class="filters">
+
+            <button class="filter-btn active">
+                Todos
+            </button>
+
+            <button class="filter-btn">
+                SUVs
+            </button>
+
+            <button class="filter-btn">
+                Sedans
+            </button>
+
+            <button class="filter-btn">
+                Hatch
+            </button>
+
+            <button class="filter-btn">
+                Esportivos
+            </button>
+
+        </div>
+
+
+        <!-- CARROS -->
+        <div class="row g-4">
+
+
+            <!-- CARRO 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="car-card">
+
+                    <img
+                        class="car-image"
+                        src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=900&q=80"
+                        alt="BMW Série 3"
+                    >
+
+                    <div class="car-body">
+
+                        <div class="car-title">
+                            BMW Série 3
+                        </div>
+
+                        <div class="car-year">
+                            2023 • Sedan
+                        </div>
+
+                        <div class="car-info">
+
+                            <span class="info-item">
+                                <i class="bi bi-speedometer2"></i>
+                                32.000 km
+                            </span>
+
+                            <span class="info-item">
+                                <i class="bi bi-gear"></i>
+                                Automático
+                            </span>
+
+                            <span class="info-item">
+                                <i class="bi bi-fuel-pump"></i>
+                                Flex
+                            </span>
+
+                        </div>
+
+                        <div class="price-label">
+                            A partir de
+                        </div>
+
+                        <div class="price">
+                            R$ 239.900
+                        </div>
+
+                        <button class="btn btn-main w-100">
+                            Tenho interesse
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARRO 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="car-card">
+
+                    <img
+                        class="car-image"
+                        src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80"
+                        alt="Volkswagen Golf"
+                    >
+
+                    <div class="car-body">
+
+                        <div class="car-title">
+                            Volkswagen Golf
+                        </div>
+
+                        <div class="car-year">
+                            2022 • Hatch
+                        </div>
+
+                        <div class="car-info">
+
+                            <span class="info-item">
+                                <i class="bi bi-speedometer2"></i>
+                                41.000 km
+                            </span>
+
+                            <span class="info-item">
+                                <i class="bi bi-gear"></i>
+                                Automático
+                            </span>
+
+                            <span class="info-item">
+                                <i class="bi bi-fuel-pump"></i>
+                                Flex
+                            </span>
+
+                        </div>
+
+                        <div class="price-label">
+                            A partir de
+                        </div>
+
+                        <div class="price">
+                            R$ 139.900
+                        </div>
+
+                        <button class="btn btn-main w-100">
+                            Tenho interesse
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARRO 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="car-card">
+
+                    <img
+                        class="car-image"
+                        src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=80"
+                        alt="Jeep Compass"
+                    >
+
+                    <div class="car-body">
+
+                        <div class="car-title">
+                            Jeep Compass
+                        </div>
+
+                        <div class="car-year">
+                            2024 • SUV
+                        </div>
+
+                        <div class="car-info">
+
+                            <span class="info-item">
+                                <i class="bi bi-speedometer2"></i>
+                                18.000 km
+                            </span>
+
+                            <span class="info-item">
+                                <i class="bi bi-gear"></i>
+                                Automático
+                            </span>
+
+                            <span class="info-item">
+                                <i class="bi bi-fuel-pump"></i>
+                                Flex
+                            </span>
+
+                        </div>
+
+                        <div class="price-label">
+                            A partir de
+                        </div>
+
+                        <div class="price">
+                            R$ 179.900
+                        </div>
+
+                        <button class="btn btn-main w-100">
+                            Tenho interesse
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARRO 4 -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="car-card">
+
+                    <img
+                        class="car-image"
+                        src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80"
+                        alt="Chevrolet Camaro"
+                    >
+
+                    <div class="car-body">
+
+                        <div class="car-title">
+                            Chevrolet Camaro
+                        </div>
+
+                        <div class="car-year">
+                            2021 • Esportivo
+                        </div>
+
+                        <div class="car-info">
+
+                            <span class="info-item">
+                                <i class="bi bi-speedometer2"></i>
+                                28.000 km
+                            </span>
+
+                            <span class="info-item">
+                                <i class="bi bi-gear"></i>
+                                Automático
+                            </span>
+
+                            <span class="info-item">
+                                <i class="bi bi-fuel-pump"></i>
+                                Gasolina
+                            </span>
+
+                        </div>
+
+                        <div class="price-label">
+                            A partir de
+                        </div>
+
+                        <div class="price">
+                            R$ 319.900
+                        </div>
+
+                        <button class="btn btn-main w-100">
+                            Tenho interesse
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARRO 5 -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="car-card">
+
+                    <img
+                        class="car-image"
+                        src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=900&q=80"
+                        alt="Toyota Corolla"
+                    >
+
+                    <div class="car-body">
+
+                        <div class="car-title">
+                            Toyota Corolla
+                        </div>
+
+                        <div class="car-year">
+                            2023 • Sedan
+                        </div>
+
+                        <div class="car-info">
+
+                            <span class="info-item">
+                                <i class="bi bi-speedometer2"></i>
+                                24.000 km
+                            </span>
+
+                            <span class="info-item">
+                                <i class="bi bi-gear"></i>
+                                Automático
+                            </span>
+
+                            <span class="info-item">
+                                <i class="bi bi-fuel-pump"></i>
+                                Flex
+                            </span>
+
+                        </div>
+
+                        <div class="price-label">
+                            A partir de
+                        </div>
+
+                        <div class="price">
+                            R$ 149.900
+                        </div>
+
+                        <button class="btn btn-main w-100">
+                            Tenho interesse
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARRO 6 -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="car-card">
+
+                    <img
+                        class="car-image"
+                        src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=900&q=80"
+                        alt="Audi Q5"
+                    >
+
+                    <div class="car-body">
+
+                        <div class="car-title">
+                            Audi Q5
+                        </div>
+
+                        <div class="car-year">
+                            2023 • SUV
+                        </div>
+
+                        <div class="car-info">
+
+                            <span class="info-item">
+                                <i class="bi bi-speedometer2"></i>
+                                21.000 km
+                            </span>
+
+                            <span class="info-item">
+                                <i class="bi bi-gear"></i>
+                                Automático
+                            </span>
+
+                            <span class="info-item">
+                                <i class="bi bi-fuel-pump"></i>
+                                Gasolina
+                            </span>
+
+                        </div>
+
+                        <div class="price-label">
+                            A partir de
+                        </div>
+
+                        <div class="price">
+                            R$ 289.900
+                        </div>
+
+                        <button class="btn btn-main w-100">
+                            Tenho interesse
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DESTAQUE -->
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="highlight">
+
+            <div class="row align-items-center g-4">
+
+                <div class="col-lg-6">
+
+                    <h2>
+                        Encontre o carro ideal para você
+                    </h2>
+
+                    <p>
+                        Nossa equipe está pronta para ajudar você a encontrar
+                        o veículo que combina com seu estilo e orçamento.
+                    </p>
+
+                    <a href="#contato" class="btn btn-main">
+                        Fale conosco
+                    </a>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <img
+                        class="highlight-img"
+                        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=80"
+                        alt="Carro esportivo"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTATO -->
+<section id="contato" class="contact-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Entre em contato
+            </h2>
+
+            <p class="section-subtitle">
+                Estamos prontos para atender você.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="contact-box text-center">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-whatsapp"></i>
+                    </div>
+
+                    <h5>WhatsApp</h5>
+
+                    <p class="text-muted mb-0">
+                        (11) 99999-9999
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="contact-box text-center">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+
+                    <h5>Endereço</h5>
+
+                    <p class="text-muted mb-0">
+                        Av. dos Automóveis, 1000
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="contact-box text-center">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-clock-fill"></i>
+                    </div>
+
+                    <h5>Horário</h5>
+
+                    <p class="text-muted mb-0">
+                        Seg. a Sáb. • 09h às 18h
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <strong>PRIME MOTORS</strong>
+
+                <p class="mb-0 mt-2">
+                    Qualidade e confiança para você escolher seu próximo carro.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+
+                <p class="mb-0">
+                    © 2026 Prime Motors. Todos os direitos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>

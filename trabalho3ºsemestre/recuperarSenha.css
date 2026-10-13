@@ -1,0 +1,44 @@
+body{
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Logo*/
+.container-logo{
+    border: 1px ;
+    width: 200px;
+    height: 100px;
+    background-image: url("logo_UnboundPlace.png");
+    background-size: 300px 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container-logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*Fim logo*/
+
+.recuperarSenha input{
+    padding: 5px;
+    font-size: 20px;
+}
+.recuperarSenha button{
+    font-size: 20px;
+    padding: 5px;
+}
+.recuperarSenha button:hover{
+    cursor: pointer;
+}
+a{
+    display: block;
+    margin-top: 10px;
+}
+        
+
+        

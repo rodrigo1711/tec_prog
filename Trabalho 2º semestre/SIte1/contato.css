@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: "Lexend Deca", sans-serif;
+    /*background-color: var(--azulclaro);*/
+}
+.contato{
+    background-color: hsl(214, 48%, 39%);
+    display: flex;
+    align-items:center ;
+    justify-content: space-around;
+    padding: 50px 100px;
+}
+.contact-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-form label {
+    font-weight: 600;
+    color: hsl(214, 48%, 39%);
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid hsl(213, 19%, 49%);
+    border-radius: 8px;
+    background-color: hsl(215, 20%, 81%);
+    color: hsl(214, 48%, 39%);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    width: 100%;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+}
+.contact-form textarea {
+    resize: none; /* Evita redimensionamento no campo de texto */
+}
+.contact-form .btn-gradiente {
+    align-self: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+.contact-inicio{
+    width: 50%;
+}
+.contact-inicio h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.contact-inicio p {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+.form-container {
+  background-color: #f1f1c1;
+  padding: 20px;
+  width: 300px;
+  margin: auto;
+  border-radius: 10px;
+  text-align: left;
+}
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+form input, form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #12ad4b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #25d366;
+}
